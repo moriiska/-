@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int N, i,K=1,c;
+	cout << "Введите размер массива:\n";
+	cin >> N;
+	int* a = new int[N];
+	cout << "Введите элементы массива:\n";
+	for (i = 0; i < N; i++)
+		cin >> a[i];
+	for (i = 0; i < N; i++)
+		if (a[i] < 0)
+			K++;
+	int* b = new int[N + K];
+	for (i = 0,c=0; i < N,c<(N+K); i++,c++)
+	{
+		b[c] = a[i];
+		if (a[i] < 0)
+		{
+			b[c + 1] = 0;
+			c++;
+		}
+		
+	}
+	for (i = 0; i < ((N + K)-1); i++)
+		cout << b[i]<<"\t";
+	return 0;
+		
+}
