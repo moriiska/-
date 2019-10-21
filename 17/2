@@ -7,9 +7,6 @@ int main()
 	cout << "Введите размер массива\n";
 	cin >> N;
 	int* a = new int[N];
-	int* b = new int[N];
-	for (i = 0; i < N; i++)
-		b[i] = 0;
 	cout << "Введите эелементы массива:\n";
 	for (i = 0; i < N; i++)
 		cin >> a[i];
