@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int M, i, j, N, H = 0, G;
+	cout << "Введите порядок матрицы: ";
+	cin >> M >> N;
+	int** a = new int* [M];
+	for (i = 0; i < M; i++)
+		a[i] = new int[N];
+	for (i = 0; i < M; i++)
+		for (j = 0; j < N; j++)
+		{
+			cout << "Введите A[" << i << "][" << j << "]:\t";
+			cin >> a[i][j];
+		}
+	for (j = 0; j < N; j++)
+	{
+		for (i = 0; i < M; i++)
+			if (a[i][j] % 2 == 1)
+			{
+				H = 1;
+				G = j;
+			}
+			else
+				H = 0;
+		if (H == 1)
+		{
+			cout << "Номер первого из столбцов, содержащих только нечетные числа\n";
+			cout << G;
+			return 0;
+		}
+		else
+		{
+			cout << 0;
+			return 0;
+		}
+	}
+	
+}
