@@ -1,0 +1,27 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	string S;
+	char ch(32);
+	int i,N,k=0,min=100000;
+	cout << "Введите строку:\n";
+	getline(cin, S);
+	N = S.length();
+	for (i = 0; i <= N; i++)
+		if (S[i] != ch)
+			k++;
+		else if (S[i] == ch)
+		{
+			if (k < min)
+				min = k;
+			k = 0;
+		}
+	cout << "Минимальный размер слова равен: " << min;
+	return 0;
+}
