@@ -1,0 +1,35 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	string S, S0;
+	int i,N,k,t=0,j=0,G=0;
+	cout << "Введите строку:\n";
+	getline(cin, S);
+	cout << "Введите строку 2:\n";
+	getline(cin, S0);
+	N = S.length();
+	k = S0.length();
+	for (i = 0; i <= N; i++)
+	{
+		if (S[i] == S0[j])
+		{
+			t++;
+			j++;
+			if (t == k)
+				G++;
+		}
+		else
+		{
+			j = 0;
+			t = 0;
+		}
+	}
+	cout << G;
+	return 0;
+}
