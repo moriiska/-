@@ -1,0 +1,22 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	string S;
+	int i,N,k=0;
+	cout << "Введите строку:\n";
+	getline(cin, S);
+	N = S.length();
+	for (i = 0; i <= N; i++)
+	{
+		if (isupper (S[i]))
+			k++;
+	}
+	cout <<"Количество прописных букв в строке: "<< k;
+	return 0;
+}
