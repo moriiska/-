@@ -1,0 +1,29 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	char ch(92);
+	string S;
+	int i, N, k = 0, j, m, t;
+	cout << "Введите строку:\n";
+	getline(cin, S);
+	N = S.length();
+	for (i = N; i > 0; i--)
+		if (S[i] == '.')
+		{
+			t = i - 1;
+			for (j = i + 1; S[j] != ch; j--)
+			{
+				k++;
+				m = j;
+			}
+		}
+	for (i = m; i <= t; i++)
+		cout << S[i];
+	return 0;
+}
