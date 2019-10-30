@@ -1,0 +1,37 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+#include <fstream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	char ch(32);
+	int N, i,j;
+	string S,H;
+	fstream file;
+	file.open("C:\\файлы\\22.4.txt");
+	if (file)
+	{
+		getline(file, S,'\0');
+		N = S.length();
+		for (i = 0; i < N; i++)
+			if (S[i] == S[i + 1] && S[i] == ch)
+				for (j = i; j < N; j++)
+					S[j] = S[j + 1];
+		file << S;
+		file.close();
+		file.open("C:\\файлы\\22.4.txt", ios::out);
+		for (i = 0; i < N; i++)
+			if (S[i] == S[i + 1] && S[i] == ch)
+				for (j = i; j < N; j++)
+					S[j] = S[j + 1];
+		file << S;
+		file.close();
+	}
+	else
+		cout << "Файлы не открыты";
+	return 0;
+}
