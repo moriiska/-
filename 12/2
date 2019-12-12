@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int Sign(int X)
+{
+	return X < 0 ? -1 : ((X == 0) ? 0 : 1);
+	
+}
+int main()
+{
+	int A,B,SUM;
+	setlocale(LC_ALL, "Rus");
+	cout << "Введите числа А и В\n";
+	cin >> A >> B;
+	SUM = Sign(A) + Sign(B);
+	cout << "Значение выражения равно\t" << SUM;
+	return 0;
+}
