@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i, K=0;
+	double S, P;
+	S = 1000;
+	cin >> P;
+	while (S <= 1100)
+	{
+		S = S * (P / 100 + 1);
+		K++;
+	}
+	cout << K << endl << S << endl;
+	return 0;
+}
