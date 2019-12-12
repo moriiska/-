@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int
+main ()
+{ double A;
+  int N, i, S = 1;
+  cin >> N >> A;
+  for (i = 1; i <= N; i++)
+    S = S + pow (A, i);
+  cout << S;
+  return 0;
+}
