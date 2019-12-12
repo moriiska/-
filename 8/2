@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main ()
+{int A,B,C,X=0;
+cin>>A>>B>>C;
+if (A<B && A<C)
+X=B+C;
+else if (B<A && B<C)
+X=C+A;
+else if (C<A && C<B)
+X=A+B;
+cout<<X;
+return 0;
+}
