@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{int A,B,q,r1,r;
+    cin>>A>>B;
+    q=A/B;
+    r=A%B;
+    while (r!=0)
+    {r1=r;
+        q=B/r;
+        r=B%r;
+    }
+    cout<<r1;
+    return 0;
+}
