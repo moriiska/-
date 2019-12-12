@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main ()
+{int x;
+cin>>x;
+if(abs(x/100)>0)
+cout<<"трехзначное";
+else if (x/100==0 && abs(x/10)>0)
+cout<<"двузначное";
+else
+cout<<"однозначное";
+if(x>0)
+cout<<" положительное";
+else if (x<0)
+cout<<" отрицательное";
+else if (x==0)
+cout<<"нулевое число";
+if(x%2==0 && (x>0 || x<0))
+cout<<" четное";
+else if (x%2!=0 && (x>0 || x<0))
+cout<<" нечетное";
+return 0;
+}
