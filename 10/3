@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int
+main ()
+{
+  int N2 = 0, N, i;
+  cin >> N;
+  for (i = 1; i <=(2 * N - 1); i++)
+    {
+      if (i % 2 == 1)
+	{N2 = N2 + i;
+      cout << N2 << endl;}
+    }
+  return 0;
+}
