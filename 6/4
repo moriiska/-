@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main ()
+{int A,B,C,K;
+cin>>A>>B>>C;
+K=(A/C)*(B/C);
+C=K*C*C;
+B=A*B-C;
+
+cout<<K<<endl<<B;
+
+return 0;
+}
