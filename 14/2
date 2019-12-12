@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int N, i,K;
+	cout << "Введите размер массива\n";
+	cin >> N;
+	
+	int* a = new int[N];
+	for (i = 1; i <= N; i++)
+	{
+		cout << "Введите " << i << " элеемент массива\n";
+		cin >> a[i];
+	}
+	for (i = 3; i <= N; i++)
+		if (a[i - 2] - a[i - 1] == a[i - 1] - a[i])
+			K = 1;
+		else
+			K = 0;
+	if (K == 1)
+		cout << "Массив является арифметической прогрессией\n Разность равна "<<a[2]-a[1];
+	else
+		cout << "0";
+
+	return 0;
+}
