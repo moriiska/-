@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+double RingS(double R1,double R2)
+{
+	int pi = 3.14;
+	double S;
+	S = pi * (R1 * R1 - R2 * R2);
+	return S;
+}
+int main()
+{
+	double A,B;
+	setlocale(LC_ALL, "Rus");
+	cout << "Введите радиусы R1 и R2\t";
+	cin >> A >> B;
+	cout << "Площадь кольца равна\t" << RingS(A, B);
+	return 0;
+}
