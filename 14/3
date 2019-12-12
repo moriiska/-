@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int N, i,min=10000000;
+	cout << "Введите размер массива\n";
+	cin >> N;
+	
+	int* a = new int[N];
+	for (i = 1; i <= N; i++)
+	{
+		cout << "Введите " << i << " элеемент массива\n";
+		cin >> a[i];
+	}
+	for (i = 1; i <= N; i++)
+		if (i % 2 == 0 && a[i] < min)
+			min = a[i];
+	cout << "Минимальный элемент массива с четным номером равен\t" << min;
+	return 0;
+}
