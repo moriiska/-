@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main ()
+{int A,A1,A2,A3,A4;
+cin>>A;
+A1=A/1000;
+A2=(A/100)%10;
+A3=(A%100)/10;
+A4=A%1000;
+if (A1==A4 && A2==A3)
+cout<<"Истина";
+else
+cout<<"Ложь";
+return 0;
+}
