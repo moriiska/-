@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int N, i,c;
+	cout << "Введите размер массива:\n";
+	cin >> N;
+	if (N > 0)
+	{
+		int* a = new int [N];
+		for (i = 1; i <= N; i++)
+		{
+			cout << "Введите " << i << " элемент:\t";
+			cin >> a[i];
+		}
+		for (i = 1,c=N+1; i <= N; i++,c--)
+		{
+			if (i % 2 == 1)
+				cout << a[i] << "\t";
+			else
+				cout << a[c] << "\t";
+		}
+
+	}
+	return 0;
+}
