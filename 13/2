@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int N, i, A, D;
+	cout << "Введите размер массива:\n";
+	cin >> N;
+	cout << "Введите первый член прогрессии:\n";
+	cin >> A;
+	cout << "Введите знаменатель геометрической прогрессии:\n";
+	cin >> D;
+	if (N > 1)
+	{
+		int* b = new int[N];
+		for (i = 1; i <= N; i++)
+			b[i] = 0;
+		for (i = 0; i < N;i++)
+		{
+			b[i] = A * pow(D, i);
+			cout << b[i]<<"\t";
+		}
+	}
+	return 0;
+}
