@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int N, K, S=0, i;
+	cin >> N;
+	K = 1;
+	while (S<N)
+	{
+		S = S + K;
+		K++;
+    }
+	cout << K-1 << endl << S << endl;
+	return 0;
+}
