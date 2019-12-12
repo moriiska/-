@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int N, i, K, j,L;
+	cout << "Введите размер массива\n";
+	cin >> N;
+	
+	int* a = new int[N];
+	for (i = 0; i <N; i++)
+	{
+		cout << "Введите " << i << " элеемент массива\n";
+		cin >> a[i];
+	}
+	for (i = 0; i < N; i++)
+		for (j = i+1; j <= N; j++)
+			if (a[i] == a[j])
+			{
+				K = i;
+				L = j;
+			}
+	 if (L < K)
+		cout << "Номера одинаковых элементов равны\t" << L<<"\t" << "и\t" << K;
+	else if (L > K)
+		cout << "Номера одинаковых элементов равны\t" << K<<"\t" << "и\t" << L;
+	return 0;
+
+}
