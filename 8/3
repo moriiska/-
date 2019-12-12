@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main ()
+{double A1,A2,B1,B2,C1,C2,AB,AC;
+cin>>A1>>A2>>B1>>B2>>C1>>C2;
+AB=sqrt(pow(B1-A1,2)+pow(B2-A2,2));
+AC=sqrt(pow(C1-A1,2)+pow(C2-A2,2));
+if(AB<AC)
+cout<<"("<<B1<<";"<<B2<<")"<<endl<<AB;
+else
+cout<<"("<<C1<<";"<<C2<<")"<<endl<<AC;
+return 0;
+}
