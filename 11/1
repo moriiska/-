@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int N, i, j, A, B;
+	cout << "Введите А\n";
+	cin >> A;
+	cout << "Введите B\n";
+	cin >> B;
+	for (i = A; i <= B; i++)
+		for (j = 0; j < i; j++)
+			cout << i << "\t";
+	return 0;
+}
