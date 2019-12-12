@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int PowerA3(int A, int B)
+{
+	B = A * A * A;
+}
+int main()
+{
+	int i,N,ST;
+	setlocale(LC_ALL, "Rus");
+	for (i = 1; i <= 5; i++)
+	{
+		cout << "\nВведите число " << i << "\t\n";
+		cin >> N; 
+		cout<<PowerA3(N, ST);
+	}
+	return 0;
+}
